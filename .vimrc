@@ -21,3 +21,6 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+if has("gui_running")
+    set guifont=Screen15,\ 10x20
+endif
