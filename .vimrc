@@ -7,6 +7,9 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
+#for windows terminal the following two:
+#let &t_SI="\e[2 q"
+#let &t_EI="\e[2 q"
 syntax on
 
 if has("gui_running")
