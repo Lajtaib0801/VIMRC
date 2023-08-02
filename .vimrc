@@ -11,6 +11,7 @@ set autoindent
 "let &t_SI="\e[2 q"
 "let &t_EI="\e[2 q"
 syntax on
+au BufReadPost *.s set ft=gas "https://github.com/Shirk/vim-gas needed!
 
 if has("gui_running")
     " set guifont=Screen15,\ 10x20 "for minimal vim
