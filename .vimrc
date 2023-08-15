@@ -17,6 +17,7 @@ au BufReadPost *.asm set ft=nasm
 if has("gui_running")
     " set guifont=Screen15,\ 10x20 "for minimal vim
     set guifont=Ubuntu\ Mono\ 14
+    set guioptions -=T
 else
     call plug#begin()
 
