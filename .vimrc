@@ -26,10 +26,16 @@ else
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-
+    Plug 'rking/ag.vim'     "needs: https://github.com/ggreer/the_silver_searcher#installing
     call plug#end()
 
     map <C-o> :NERDTreeToggle<CR>
+    map <C-f> :Files<CR>
+    map <C-t> :tabnew<CR>
+    map <C-w> :tabclose<CR>
+    map <C-Right> :tabnext<CR>
+    map <C-Left> :tabprevious<CR>
+    map <C-S> :Ag 
     " colorscheme tender
     colorscheme OceanicNext
     set directory=$HOME/.cache/vim/swap// " required --> mkdir -p ~/.cache/vim/swap
