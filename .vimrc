@@ -24,6 +24,8 @@ else
     Plug 'jacoborus/tender.vim'
     Plug 'rafi/awesome-vim-colorschemes'
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 
     call plug#end()
 
