@@ -26,9 +26,13 @@ else
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'rking/ag.vim'     "needs: https://github.com/ggreer/the_silver_searcher#installing
-    call plug#end()
+    Plug 'prabirshrestha/async.vim'
+    "Plug 'leafgarland/typescript-vim' " TypeScript syntax
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'rhysd/vim-clang-format'
 
+    call plug#end()
+    let g:coc_global_extensions = ['coc-tsserver']
     map <C-o> :NERDTreeToggle<CR>
     map <C-f> :Files<CR>
     map <C-t> :tabnew<CR>
@@ -36,7 +40,18 @@ else
     map <C-Right> :tabnext<CR>
     map <C-Left> :tabprevious<CR>
     map <C-S> :Ag 
+    nmap <C-CR>  <Plug>(coc-codeaction)
     " colorscheme tender
     colorscheme OceanicNext
+    inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+    if has('nvim')
+        inoremap <silent><expr> <c-space> coc#refresh()
+    else
+        inoremap <silent><expr> <c-@> coc#refresh()
+    endif
+    nmap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>
+
     set directory=$HOME/.cache/vim/swap// " required --> mkdir -p ~/.cache/vim/swap
 endif
