@@ -39,7 +39,9 @@ else
     map <C-w> :tabclose<CR>
     map <C-Right> :tabnext<CR>
     map <C-Left> :tabprevious<CR>
-    map <C-S> :Ag 
+    map <C-S> :Ag
+    inoremap <C-@> <C-n>
+    inoremap <C-S-@> <C-p>
     nmap <C-CR>  <Plug>(coc-codeaction)
     " colorscheme tender
     colorscheme OceanicNext
