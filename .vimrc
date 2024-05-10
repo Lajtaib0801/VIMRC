@@ -42,6 +42,10 @@ else
     map <C-S> :Ag
     inoremap <C-@> <C-n>
     inoremap <C-S-@> <C-p>
+    nnoremap <M-Up> :m-2<CR>==
+    nnoremap <M-Down> :m+<CR>==
+    vnoremap <M-Up> :m-2<CR>gv=gv
+    vnoremap <M-Down> :m'>+<CR>gv=gv
     nmap <C-CR>  <Plug>(coc-codeaction)
     " colorscheme tender
     colorscheme OceanicNext
