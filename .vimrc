@@ -10,6 +10,8 @@ set autoindent
 "for windows terminal the following two:
 "let &t_SI="\e[2 q"
 "let &t_EI="\e[2 q"
+"in windows terminal if backspace does not work
+"set backspace=indent,eol,start
 syntax on
 au BufReadPost *.s set ft=gas "https://github.com/Shirk/vim-gas needed!
 au BufReadPost *.asm set ft=nasm
