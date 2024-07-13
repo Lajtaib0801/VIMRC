@@ -7,9 +7,10 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
-"for windows terminal the following two:
+"for windows terminal the following three:
 "let &t_SI="\e[2 q"
 "let &t_EI="\e[2 q"
+"set ttymouse=sgr
 "in windows terminal if backspace does not work
 "set backspace=indent,eol,start
 syntax on
@@ -48,6 +49,10 @@ else
     nnoremap <M-Down> :m+<CR>==
     vnoremap <M-Up> :m-2<CR>gv=gv
     vnoremap <M-Down> :m'>+<CR>gv=gv
+    nnoremap <S-M-Up> :resize +2<CR>
+    nnoremap <S-M-Down> :resize -2<CR>
+    nnoremap <S-M-Left> :vertical resize -2<CR>
+    nnoremap <S-M-Right> :vertical resize +2<CR>
     nmap <C-CR>  <Plug>(coc-codeaction)
     " colorscheme tender
     colorscheme OceanicNext
