@@ -64,31 +64,3 @@ else
     set directory=$HOME/.cache/vim/swap// " required --> mkdir -p ~/.cache/vim/swap
 endif
 
-"habamax settings (emacs cyberpunk-like theme)
-def RePire()
-    if &background == 'dark'
-        hi Normal      ctermbg=NONE guibg=#1c1c1c
-        hi TablineSel  ctermbg=NONE guibg=#1c1c1c
-        hi Folded      ctermbg=233  guibg=#121212
-        hi Cursorline  ctermbg=236  guibg=#303030
-        hi Pmenu       ctermbg=236  guibg=#303030
-        hi ColorColumn ctermbg=233  guibg=#121212
-    else
-        hi Normal       guibg=#f7f7f0
-        hi TablineSel   guifg=#f7f7f0
-        hi Tabline      guifg=#444444 guibg=#d7d7d0
-        hi StatusLineNC guifg=#444444 guibg=#d7d7d0
-        hi StatusLine   guibg=#5f5f5f gui=NONE
-        hi Cursorline   guibg=#e7e7e0
-        hi Folded       guibg=#fffff9
-        hi ColorColumn  guibg=#fffff9
-    endif
-enddef
-
-augroup colorschemes | au!
-    au Colorscheme pire RePire()
-augroup END
-
-set background=dark
-set termguicolors
-silent! colorscheme pire
