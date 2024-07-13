@@ -30,12 +30,9 @@ else
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'prabirshrestha/async.vim'
-    "Plug 'leafgarland/typescript-vim' " TypeScript syntax
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'rhysd/vim-clang-format'
+    Plug 'rhysd/vim-clang-format'
 
     call plug#end()
-    let g:coc_global_extensions = ['coc-tsserver']
     map <C-o> :NERDTreeToggle<CR>
     map <C-f> :Files<CR>
     map <C-t> :tabnew<CR>
@@ -53,18 +50,9 @@ else
     nnoremap <S-M-Down> :resize -2<CR>
     nnoremap <S-M-Left> :vertical resize -2<CR>
     nnoremap <S-M-Right> :vertical resize +2<CR>
-    nmap <C-CR>  <Plug>(coc-codeaction)
     " colorscheme tender
+    " colorscheme meta5
     colorscheme OceanicNext
-    inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-    if has('nvim')
-        inoremap <silent><expr> <c-space> coc#refresh()
-    else
-        inoremap <silent><expr> <c-@> coc#refresh()
-    endif
-    nmap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>
 
     set directory=$HOME/.cache/vim/swap// " required --> mkdir -p ~/.cache/vim/swap
 endif
