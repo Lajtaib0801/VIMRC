@@ -59,3 +59,19 @@ else
     set directory=$HOME/.cache/vim/swap// " required --> mkdir -p ~/.cache/vim/swap
 endif
 
+function! OpenVTerm()
+    rightbelow vsplit | terminal
+    if winnr('j') != winnr()
+        wincmd j
+        close
+    else
+        echo "No windows below to close"
+    endif
+endfunction
+
+function! OpenTerm()
+    belowright terminal
+endfunction
+
+command! VTerm call OpenVTerm()
+command! Term call OpenTerm()
