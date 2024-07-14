@@ -31,6 +31,8 @@ else
     Plug 'junegunn/fzf.vim'
     Plug 'prabirshrestha/async.vim'
     Plug 'rhysd/vim-clang-format'
+    Plug 'vim-scripts/AutoComplPop'
+    Plug 'ycm-core/YouCompleteMe'
 
     call plug#end()
     map <C-o> :NERDTreeToggle<CR>
