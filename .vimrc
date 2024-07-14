@@ -33,7 +33,7 @@ else
     Plug 'rhysd/vim-clang-format'
     Plug 'vim-scripts/AutoComplPop'
     Plug 'ycm-core/YouCompleteMe'
-
+    " For ycm -> in ~/.vim/plugged the python3 install script should be ran, but for that the python3-dev package should be installed because of headers, and cmake aswell
     call plug#end()
     map <C-o> :NERDTreeToggle<CR>
     map <C-f> :Files<CR>
